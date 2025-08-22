@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Bài 3</title>
+	</head>
+	<body>
+		<MARQUEE>
+			<p><b> HELLO </b></p>
+			<!-- chữ chạy hoặc ảnh chạy -->
+		</MARQUEE>
+		<h1>FORM Điền thông tin</h1>
+		<form>
+			<div>	
+				<p><b>Họ và tên</b></p>
+				<input type="text" name="hovaten" placeholder="Điền họ và tên">
+				<!-- không để thuộc tính TYPE cũng được vì sẽ mặc định text cho - muốn có dòng họ và tên mờ ở text thì dùng placeholder -->
+			</div>
+			<div>
+				<p><b>Mã số sinh viên</b></p>
+				<input type="text" name="mssv" placeholder="Điền mssv" value="2321050008" readonly >
+				<!-- dùng readonly chỉ xem không sửa - value chỉ thêm chứ không sửa được giá trị có sẵn -->
+			</div>
+			<div>
+				<p><b>Giới thiệu bản thân</b></p>
+				<textarea name="gioithieu">Nhập thông tin</textarea>
+			</div>
+			<div>
+				<p><b>Email</b></p>
+				<input type="text" name="email" placeholder="Định dạng @gmail">
+			</div>
+			<div>
+				<p><b>Số điện thoại:</b></p>
+				<input type="tel" name="telephone"
+				pattern="([0-9]{1}(-[0-9]{3})(-[0-9]{3}(-[0-9]{4}))"
+				placeholder="Dạng số:1-234-567-8910" required>
+				<!--required là bắt buộc phải điền-->
+				<!-- số bắt đầu:0 
+				số thứ 2: 9,3,4,8
+				8 số cuối:0-9 
+				<input type="tel" name="telephone" 
+				pattern="([0]{1}([3,4,8,9]{1})([0-9]{8}))" 
+				placeholder="Dạng số:09xxxxxxxx"--> 
+			</div>
+			<div>
+				<p><b>Giới tính</b></p>
+				<input type="radio" name="gioitinh" value="nam">
+				Nam<br>
+				<input type="radio" name="gioitinh" value="nu">
+				Nữ<br>
+			</div>
+			<div>
+				<p><b>Sở thích</b></p>
+				Game:<input type="checkbox" name="sothich" value="game"><br>
+				Xem phim:<input type="checkbox" name="sothich" value="xemphim"><br>
+				Nghe nhạc:<input type="checkbox" name="sothich" value="nghenhac"><br>
+			</div>
+			<div>
+				<p><b>Danh sách trình duyệt web yêu thích</b></p>
+				<select name="browsers">
+					<option value="Internet Explorer">Internet Explorer</option>
+					<option value="Firefox">Firefox</option>
+					<option value="Chorme">Chorme</option>
+					<option value="Opera">Opera</option>
+					<option value="Cốc Cốc">Cốc Cốc</option>
+					<option value="Safari">Safari</option>
+				</select>
+			</div>
+			<br>
+			<div>
+				0 <input type="range" value="80">100
+			</div>
+			<div>
+				<p><b>Tuổi</b></p>
+				<input type="number" name="tuoi" step="2">
+			</div>
+			<div>
+				<p><b>Ngày tháng năm sinh</b></p>
+				<input type="date" name="ngaysinh">
+			</div>
+			<div>
+				<p><b>Chọn màu sắc</b></p>
+				<input type="color" name="mausac">
+			</div>
+			<div>
+				<p><b>Mật khẩu:</b></p>
+				<input type="password" name="matkhau">
+			</div>
+			<br>
+			<div>
+				<input type="submit">
+				<input type="reset">
+			</div>
+		</form>
+		<br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/qR7vNVU6Beo?si=e_WDQmK30jngHJw7"
+		 title="YouTube video player" 
+		 frameborder="0"
+		 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<div>
+			<audio controls>
+				<source src="" type="audio/...mp3">
+				<!-- src là đường dẫn đến file âm thanh -->
+			</audio>
+		</div>
+		<div>
+			<video controls width="320" height="240">
+				<source src="" type="video/mp4">
+				<!-- src là đường dẫn đến file video -->
+			</video>
+		</div>
+		<div>
+			thẻ &lt;h1&gt;&lt;/h1&gt; dùng để viết tiêu đề
+			<!-- dấu cách: &nbsp; dấu <: &lt;
+			 dấu & là &amp; dấu >: &gt;
+			 dấu " là &quot; dấu ' là &apos; 
+			 dấu © là &copy; dấu ® là &reg; -->
+		</div>
+	</body>
+</html>
