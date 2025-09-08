@@ -1,5 +1,6 @@
 body{
     margin:0px;
+
 }
 nav{
     background-color: #0c4ca3 ;
@@ -31,6 +32,10 @@ li{
     display: flex;
     justify-content: space-between;
 }
+.anh-qc{
+    gap:3px;
+    border: 1px solid #f1f1f2;
+}
 header{
     border-bottom: 15px solid #f1f1f2;
 }
@@ -38,20 +43,28 @@ header{
 .tintuc-noidung{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px
+    padding: 20px;
 }
 .tieude {
+    width: 100%;
     color:#0c4ca3 ;
     margin: 15px;
     font-size: 25px;
     font-family: Arial;
-    border-bottom: 3px solid #0f75bc
+    border-bottom: 3px solid #0f75bc;  
+}
+.tieude a{
+    text-decoration: none;
+    color:#0c4ca3 ;
 }
 .xemthem{
-    color:#939597;
     text-align: right;
     font-size: 13px;
     margin: 0 0 10px 0;
+}
+.xemthem a{
+    color:#939597;
+    text-decoration: none;
 }
 .baiviet{
     display: grid;
@@ -68,13 +81,174 @@ header{
 }
 .baiviet-1 h3{
     font-size: 16px;
-    margin: 10px;
+    margin: 12px;
 }
 .baiviet-1 a{
     text-decoration: none;
     color: black;
-    margin:0 10px 12px;
+    margin:0 10px 12px 10px;
+    text-align: justify;
 }
 .baiviet-1 li{
-    padding:5px 10px 5px 0
+    padding:5px 10px 5px 10px;
+    margin: 0 10px 0 10px;
+}
+.qc1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f1f1f2;
+    flex-wrap: wrap;
+}
+.anh-qc1 img{
+    width: 191px;
+    height: 80px;
+}    
+.anh-qc2{
+    width: 20%;
+    border: white ;
+}
+.anh-qc2 a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 40px;  
+}
+.tintuc-thongbao{
+    background-color: #f1f1f2;
+    height: 500px;
+    display: flex;
+    width: 100%;
+}
+.a1{
+    width: 10%;
+}
+.tintuc1{
+    width: 80%;
+    background-color: #f1f1f2;
+}
+.thongbao{
+    width :100%;
+    display: flex;
+}
+.thongbao-1{
+    width: 33%;
+    background-color: #f1f1f2;
+}
+.thongbao-1tren{
+    width: 100%;
+    background-color:#f1f1f2;
+    margin: 10px 0 0 0
+}
+.thongbao-1duoi{
+    width: 100%;
+   margin-top: 10px;
+    background-color:#f1f1f2;
+}
+.thongbao-1duoi a{
+    text-decoration: none;
+    color: black
+}
+.thongbao-2{
+    margin-top: 10px;
+    width: 67%;
+    background-color: #f1f1f2
+}
+.thongbao-2trai{
+    width: 50%;
+    background-color: #f1f1f2;
+    float: left;
+}
+.thongbao-2trai a{
+    text-decoration: none;
+    color: black;
+}
+.thongbao-2trai .xemthem a{
+    color:#939597;
+}
+.thongbao-2phai{
+    width: 40%;
+    background-color: #f1f1f2;
+    float: right;
+    margin-left: 10px;
+    color:#0c4ca3
+}
+.a2{
+    width: 10%;
+}
+.qc2{
+    display: flex;
+    width: 100%; 
+}
+.anh-qc2-1 img{
+    border: 1px solid #f1f1f2;
+    border-bottom: white;
+    height: 180px;
+    margin-right: 5px;
+}
+
+.tintuc2{
+    width: 80%;
+    background-color:black;
+    display: flex;
+}
+.tintuc2-1 {
+    width: 60%;
+    color: white;
+    text-align: center;
+    border-right: #939597 dotted 1px;
+    
+}
+.tintuc2-1-1{
+    padding: 30px;
+    font-size: 17px;
+    border-bottom: #939597 dotted 1px;
+}
+.ytb{
+    margin-top: 30px;
+    width: 100%;
+    
+    justify-content: center;
+    
+}
+.tintuc2-2 {
+    width: 40%;  
+    color: white;
+}
+.tintuc2-2-1{
+    
+    padding: 20px;
+    font-size: 17px;
+    border-bottom: #939597 dotted 1px;
+}
+.tintuc2-2-2{
+    padding: 40px;
+    font-size: 15px;
+    border-bottom: #939597 dotted 1px;
+   
+}
+.tintuc2-2-3{
+    padding: 40px;
+    font-size: 15px; 
+}
+footer {
+    background-color:#0c4ca3;
+    height: 300px;
+    color: white;
+    margin-bottom: 0;
+    position: relative;
+    bottom: 0;
+    margin-top: 0;
+box-sizing: border-box;
+}
+
+.foot{
+    display: flex;
+    
+}
+.foot1{
+    margin: 30px 50px 0 50px;
+}
+.ngang{
+    display: flex;
 }
