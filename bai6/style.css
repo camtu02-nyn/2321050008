@@ -1,38 +1,131 @@
 body{
-    margin:0px;
-    font-size: Arial, sans-serif;
-    line-height: 1;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color :white;
+    font-size: 16px;
 }
-header{
-    background-color: black;
-    height: 50px;
+.header{
+    width: 100%;
+    padding: 10px;
+    background-color: black;   
+}
+.header-trai{
+    width: 20%;
+    margin: 0;
+}
+.header-giua{
+    width: 60%;
     display: flex;
+    justify-content: center;
+    margin-left: 200px;
+}
+.header-phai{
+    width: 20%;
+}
+.title1{
+    display: flex;
+    width: 100%;
+}
+.tieude1{
+    padding: 5px;
+    margin-left: 10px;
+}
+.title2{
+    width: 100%;
 }
 .timkiem{
-    text-align: center;
-    justify-content: space-between;
+    margin-bottom: 10px;
 }
 .main{
-    width: 100%;
+    width: 100% ;
     display: flex;
-    height: 1000px;
-    background-color: black;
+    background-color: #ccc;
 }
 .trai{
-    background-color: antiquewhite;
-    width: 25%;
+    width: 20% ;
+    background-color:rgba(0, 0, 0, 0.377);
+    height: 670px;
+    margin: 5px;
     border-radius: 5px;
+    scrollbar-width: none;
+}
+.creat{
+    padding:5px;
+    color: aliceblue;
+    background-color: #ccc;
+    border-radius: 18px;
+    margin: 5px 5px 5px 70px;
 }
 .giua{
-    width: 50%;
-    margin-right: 10px;
-    background-color: blueviolet;
+    width: 60%;
+    background-color:black;
+    height: 670px;
+    margin: 5px;
     border-radius: 5px;
-    margin-left: 7px;
+    scrollbar-width: none;
+}
+.creat1{
+    padding:5px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    height: 20px;
+    margin: 5px 4px 0 4px;
+}
+.creat2{
+    padding:5px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 15px;
+    height: 20px;
+    margin: 5px 3px 0 3px;
+}
+.song{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 6px;
+}
+.song-card{
+    background-color:rgb(33, 33, 33);
+    border-radius: 7px;
+    align-items: center;
+    height: 39px;
+}
+.song-card img{
+    border-radius: 4px;
+    display: block;
+}
+.song-card a{
+    text-decoration: none;
+    position: relative; 
+}
+.song-title{
+    position: absolute;
+    bottom: 6px;
+    left: 67px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+
+}
+.phai{
+    width: 20%;
+    background-color:rgb(146, 141, 141);
+    height: 670px;
+    margin: 5px;
+    border-radius: 5px;
+    scrollbar-width: none;
+}
+.nhac3-2 video {
+    display: flex;
+    height:200px;
+	margin: 20px auto;
+	width:90%;
+	border-radius:15px;
+	background-color: black;
+    justify-content: center;
 }
 
-.phai{
-    width: 25%;
-    background-color: brown;
-    border-radius: 5px;
-}
