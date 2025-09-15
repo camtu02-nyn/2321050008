@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .header {
+            height: 100px;
+        }
+
+        .container {
+            width: 35%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            color: blue;
+            justify-content: center;
+            display: flex;
+            margin: 0;
+            font-size: 50px;
+
+        }
+
+        .noidung {
+            width: 90%;
+            height: 100vh;
+            background-color: #ccc;
+            margin: auto;
+
+        }
+
+        .noidung h1 {
+            text-align: center;
+            color: black;
+            margin-top: -5px;
+        }
+
+        .noidung h4 {
+            text-align: center;
+            color: rgb(36, 35, 35);
+            margin-top: -15px;
+        }
+
+        .form {
+            width: 100%;
+            margin: auto;
+            margin-top: 10px;
+            display: flex;
+
+        }
+
+        .form-name {
+            width: 55%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            margin: 10px;
+            padding-left: 8px;
+
+        }
+
+        .form1 {
+            width: 100%;
+            height: 40px;
+            margin: auto;
+            display: flex;
+            margin: -10px 0 10px 0;
+        }
+
+        #tt {
+            width: 50%;
+            border-radius: 5px;
+            border: 1px solid gray;
+            margin: 10px;
+        }
+
+        .tieude {
+            margin-left: 10px;
+            color: rgb(36, 35, 35);
+        }
+
+        .gioitinh {
+            display: flex;
+            align-items: center;
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 10px;
+            gap: 5px;
+            background: white;
+            flex: 1;
+        }
+
+        .fullinput {
+            width: 95%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            margin: 10px;
+            padding-left: 8px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: rgb(36, 35, 35);
+            padding: 0 10px;
+        }
+
+        .signup {
+            background: #42b72a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 50%;
+            height: 40px;
+            margin: auto;
+            display: block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .signup:hover {
+            background: #36a420;
+        }
+
+        .have {
+            text-align: center;
+            color: #1877f2;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h1>facebook</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="noidung">
+                <h1>Create a new account</h1>
+                <h4>It's quick and easy.</h4>
+                <hr>
+                <div class="form">
+                    <input class="form-name" type="text" name="name" placeholder="First name">
+                    <input class="form-name" type="text" name="Surname" placeholder="Surname">
+                </div>
+                <div>
+                    <p class="tieude">Date of brith</p>
+                    <div class="form1">
+                        <select id="tt">
+                            <option value="#">15</option>
+                            <option value="#">16</option>
+                            <option value="#">17</option>
+                            <option value="#">18</option>
+                        </select>
+                        <select id="tt">
+                            <option value="#">Sep</option>
+                            <option value="#">May</option>
+                            <option value="#">Wen</option>
+                            <option value="#">WAAA</option>
+                        </select>
+                        <select id="tt">
+                            <option value="#">2025</option>
+                            <option value="#">2024</option>
+                            <option value="#">2023</option>
+                            <option value="#">2022</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <p class="tieude">Gender</p>
+                    <div class="form1">
+                        <label class="gioitinh">
+                            <input type="radio" name="gender"> Female
+                        </label>
+                        <label class="gioitinh">
+                            <input type="radio" name="gender"> Male
+                        </label>
+                        <label class="gioitinh">
+                            <input type="radio" name="gender"> Custom
+                        </label>
+                    </div>
+                </div>
+                <div class="form1">
+                    <input class="fullinput" type="text" placeholder="Mobile number or email address">
+                </div>
+                <div class="form1">
+                    <input class="fullinput" type="password" placeholder="New password">
+                </div>
+                <p class="note">
+                    People who use our service may have uploaded your contact information to Facebook. Learn
+                    more.<br><br>
+                    By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy.
+                    You may receive SMS notifications from us and can opt out at any time.
+                </p>
+                <div class="form1">
+                    <button class="signup">Sign Up</button>
+                </div>
+                <p class="have">Already have an account?</p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
