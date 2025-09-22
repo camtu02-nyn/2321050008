@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <script>
+        document.writeln("Hello World <br>"); // câu lệnh in ra màn hình
+
+        let hoTen = "Le Cam Tu";//khai báo biến họ tên
+        document.writeln(hoTen + "<br>");// nối chuỗi dùng dấu +
+
+        //khai báo hằng số
+        const pi = 3.14;
+
+        let soThuNhat = 10;
+        let soThuHai = 5;
+        let ketQua = 0;
+        // +
+        ketQua = soThuNhat + soThuHai;
+        document.writeln(ketQua + "<br>");
+        // -
+        ketQua = soThuNhat - soThuHai;
+        document.writeln(ketQua + "<br>");
+        // *
+        ketQua = soThuNhat * soThuHai;
+        document.writeln(ketQua + "<br>");
+        // /
+        ketQua = soThuNhat / soThuHai;
+        document.writeln(ketQua + "<br>");
+        // %
+        ketQua = soThuNhat % soThuHai;
+        //++ phải viết trước rồi mới in ra được
+        ketQua++
+        document.writeln(ketQua + "<br>");
+        // += -= *= /= %= gán giá trị
+        soThuNhat += soThuHai;
+        document.writeln(soThuNhat + "<br>");
+
+        // == so sánh bằng giá trị
+        // === so sánh bằng giá trị và kiểu dữ liệu
+        // != so sánh khác giá trị
+        // !== so sánh khác giá trị hoặc khác kiểu dữ liệu
+        // ! phủ định
+        let a;
+        document.writeln(a + "<br>");//undefined là chưa được gán giá trị
+        let thongTinSinhVien = {
+            hoTen: "Le Thi Cam Tu",
+            tuoi: 20,
+            gioitinh: false,
+            lop: "CNPM K68",
+        }
+        // let diaChi {
+        //     thanhPho: "Vĩnh Phúc",
+        //     huyen:"Tam Dương",
+        // }
+        let diaChiCamTu = {
+            thanhPho: "Vĩnh Phúc",
+            huyen: "Tam Dương",
+        }
+        thongTinSinhVien.diaChi = diaChiCamTu;
+
+
+        document.writeln(" xin chào "
+            + thongTinSinhVien.hoTen
+            + " lớp "
+            + thongTinSinhVien.lop
+            + " địa chỉ ở "
+            + thongTinSinhVien.diaChi.thanhPho
+            + " năm sinh "
+            + (2025 - thongTinSinhVien.tuoi)
+            + "<br>");
+        let soThuBa = "15";
+        parseInt(soThuBa);//ép kiểu chuỗi sang số nguyên, phải gán biến thì nó mới thay đổi
+        // soThuBa = parseInt(soThuBa);
+        document.writeln(typeof parseInt(soThuBa) + "<br>");
+    </script>
+</body>
+
+</html>
