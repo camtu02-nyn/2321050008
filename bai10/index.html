@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Thông tin đơn hàng</h1>
+    <script>
+        let thongTinDonHang = {
+            maDonHang: "DH101",
+            thongTinKH: {
+                hoTen: "Lê Thị Cẩm Tú",
+                SDT: "0338180117",
+                TTTV: true
+            },
+            dsSanPham: {
+                caPhe: {
+                    maSP: "CP12",
+                    tenSP: "Cà Phê",
+                    SL: 10,
+                    giaTien: 20000
+                },
+                matCha: {
+                    maSP: "MT11",
+                    tenSP: "Matcha",
+                    SL: 20,
+                    giaTien: 30000
+                },
+                traSua: {
+                    maSP: "TS15",
+                    tenSP: "Trà Sữa",
+                    SL: 15,
+                    giaTien: 25000
+                }
+            },
+            ttThanhToan: true,
+            dcGiaoHang: "Tòa C, Vintracom Vĩnh Ngọc",
+        }
+        let tong = thongTinDonHang.dsSanPham.caPhe.SL * thongTinDonHang.dsSanPham.caPhe.giaTien
+            + thongTinDonHang.dsSanPham.matCha.SL * thongTinDonHang.dsSanPham.matCha.giaTien
+            + thongTinDonHang.dsSanPham.traSua.SL * thongTinDonHang.dsSanPham.traSua.giaTien
+        document.writeln(" Tổng số tiền của đơn hàng : ", tong + "<br> ");
+    </script>
+    <script>
+        // String
+        let hoTen = "Lê Thị Cẩm Tú";
+        document.writeln(hoTen.length + "<br>"); // độ dài chuỗi
+        // truy cập ký tự trong chuỗi
+        let myString = "Hello World";
+        document.writeln(myString[0] + "<br>"); // H
+        // cắt chuỗi
+        document.writeln(myString.slice(1, 4) + "<br>"); //ell
+        //thay thế chuỗi
+        document.writeln(myString.replace("World", "Cẩm Tú") + "<br>"); //Hello Cẩm Tú, vị trí đầu tiên là string cũ (1 vài kí tự trong string cũng được)
+        // chuyển chuỗi thành chữ hoa
+        document.writeln(myString.toUpperCase() + "<br>"); //HELLO WORLD
+        // chuyển chuỗi thành chữ thường
+        document.writeln(myString.toLowerCase() + "<br>"); //hello world 
+        // cách 1
+        // tìm ký tự trong chuỗi : có trả về vị trí, không có trả về -1
+        document.writeln(myString.indexOf("o") + "<br>"); //4
+        // cách 2 trả ra true/false
+        document.writeln(myString.includes("o") + "<br>"); //true
+        // tách chuỗi thành mảng
+        document.writeln(myString.split("") + "<br>");
+        document.writeln(myString.startsWith("H") + "<br>"); //true, kiểm tra xem chuỗi có ký tự đó hay không và có thể đếm số lượng(trong lớp có bao nhiêu bạn có tên đó)
+        // định dạng số theo số thập phân
+        var pi = 3.14159265358979;
+        pi.toFixed(2); // 3.14
+        // kiểm tra là số hay không
+        document.writeln(isNaN("10") + "<br>");
+        // date
+        let toDay = new Date();//lấy ngày giờ hiện tại
+        document.writeln(toDay + "<br>");
+        let day = new Date("2026-06-10");
+        document.writeln(day + "<br>");
+        // lấy năm
+        document.writeln(toDay.getFullYear() + "<br>");
+        // lấy tháng
+        document.writeln(toDay.getMonth() + "<br>"); // tháng bắt đầu từ 0
+        // lấy ngày
+        document.writeln(toDay.getDate() + "<br>");
+        // getDay() lấy thứ trong tuần
+        // getHours() lấy giờ
+        // getMinutes() lấy phút
+        // getSeconds() lấy giây
+    </script>
+</body>
+
+</html>
