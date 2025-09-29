@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        // Mảng
+        let array = [1, 2, 3, 4, 5, 'a', 'b', 'c'];
+        array[3] = 6;// đổi phần tử trong mảng
+        let ten = 'ten';
+        let thongTin = {
+            ten: ten,
+        }
+        document.writeln(array + "<br>");
+        document.writeln(Array.isArray(array) + "<br>"); // truyền tên biến vào kiểm tra có phải mảng không
+        document.writeln(array.length + "<br>"); // độ dài mảng
+        document.writeln(array[0] + "<br>"); // truy cập phần tử trong mảng
+        document.writeln(array.indexOf(3) + "<br>"); // tìm vị trí phần tử trong mảng, trả về -1 nếu không tìm thấy
+        document.writeln(array.lastIndexOf(3) + "<br>"); // tìm vị trí phần tử trong mảng từ cuối về đầu, trả về -1 nếu không tìm thấy
+
+        let a, b, c, d;
+        a = [1, 2, 3];
+        b = 'JScript';
+        c = [42, 'Hello'];
+        d = a.concat(b, c);  //nối mảng
+        document.writeln(d + "<br>");
+        // d = d.join('-'); // nối mảng thành chuỗi, tham số là ký tự ngăn cách các phần tử
+        d.pop(); // xóa phần tử cuối mảng
+        d.push(100); // thêm phần tử vào cuối mảng
+        d.reverse(); // đảo ngược mảng
+        d.shift(); // xóa phần tử đầu mảng
+        d.unshift(200); // thêm phần tử vào đầu mảng
+        document.writeln(d + "<br>");
+
+        // câu điều kiện
+        let so = 10;
+        // tách về chuỗi để tránh lỗi làm tròn số, lấy ra số cuối cùng rồi ép kiểu về số để kiểm tra chẵn lẻ
+        if (so % 2 == 0) {
+            document.writeln(so + " là số chẵn" + "<br>");
+        }
+        else {
+            document.writeln(so + " là số lẻ" + "<br>");
+        }
+
+        let now = new Date().getHours();
+        if (now >= 5 && now < 10) {
+            document.writeln("Chào buổi sáng" + "<br>");
+        }
+        else if (now >= 10 && now < 13) {
+            document.writeln("Chào buổi trưa" + "<br>");
+        }
+        else if (now >= 13 && now < 17) {
+            document.writeln("Chào buổi chiều" + "<br>");
+        }
+        else if (now >= 17 && now < 22) {
+            document.writeln("Chào buổi tối" + "<br>");
+        }
+        else {
+            document.writeln("Chào buổi đêm" + "<br>");
+        }
+
+        let diemA = 9;
+        let diemB = 7;
+        let diemC = 9;
+        if ((diemA < 0 || diemA > 10)
+            || (diemB < 0 || diemB > 10)
+            || (diemC < 0 || diemC > 10)) {
+            document.writeln(" Điểm nhập vào bị sai - mời nhập lại");
+        }
+        else {
+            let diem = diemA * 0.6 + diemB * 0.3 + diemC * 0.1;
+            document.writeln("Điểm A: " + diemA + "<br>");
+            document.writeln("Điểm B: " + diemB + "<br>");
+            document.writeln("Điểm C: " + diemC + "<br>");
+            document.writeln("Điểm tổng: " + diem + "<br>");
+
+            if (diem >= 8 && diem <= 10) {
+                document.writeln(" Điểm chữ: A");
+            }
+            else if (diem >= 7 && diem < 8) {
+                document.writeln("Điểm chữ: B");
+            }
+            else if (diem >= 5 && diem < 7) {
+                document.writeln("Điểm chữ: C");
+            }
+            else if (diem >= 4 && diem < 5) {
+                document.writeln("Điểm chữ: D");
+            }
+            else if (diem >= 0 && diem < 4) {
+                document.writeln("Điểm chữ: F");
+            }
+            else {
+                document.writeln("điểm nhập vào không hợp lệ");
+            }
+        }
+    </script>
+</body>
+
+</html>
