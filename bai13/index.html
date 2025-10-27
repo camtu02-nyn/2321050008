@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tính tổng điểm</h1>
+    <p>Công thức tính điểm: Điểm A * 0,6 + Điểm B * 0,3 + Điểm C * 0,1</p>
+    <div>
+        Nhập điểm A:
+        <input type="number" id="so1" placeholder="Nhập điểm A">
+    </div>
+    <div>
+        Nhập điểm B:
+        <input type="number" id="so2" placeholder="Nhập điểm B">
+    </div>
+    <div>
+        Nhập điểm C:
+        <input type="number" id="so3" placeholder="Nhập điểm C">
+    </div>
+    <div>
+        <button onclick="tinhTong()">Tính tổng</button>
+    </div>
+    <div>
+        Tổng điểm: <input type="number" id="ketqua">
+    </div>
+    <script>
+        // lấy ra giá trị có thể trỏ đến thẻ input hoặc id hoặc class
+        function tinhTong() {
+            let diemA = parseFloat(document.getElementById("so1").value);
+            let diemB = parseFloat(document.getElementById("so2").value);
+            let diemC = parseFloat(document.getElementById("so3").value);
+            let canhBao = "";
+            if (!diemA || diemA < 0 || diemA > 10) {
+                canhBao += "Vui lòng nhập lại điểm A\n";
+            }
+            if (!diemB || diemB < 0 || diemB > 10) {
+                canhBao += "Vui lòng nhập lại điểm B\n";
+            }
+            if (!diemC || diemC < 0 || diemC > 10) {
+                canhBao += "Vui lòng nhập lại điểm C\n";
+            }
+            if (canhBao != "") {
+                alert(canhBao);
+            }
+            let tong = diemA * 0.6 + diemB * 0.3 + diemC * 0.1;
+            document.getElementById("ketqua").value = tong;
+            let diemChu = "";
+            if (8 < tong && tong <= 10) {
+                diemChu = "A"; //document.getElementById("ketqua").value = "A";
+            } else if (tong >= 7 && tong < 8) {
+                diemChu = "B";
+            } else if (tong >= 6 && tong < 7) {
+                diemChu = "C";
+            } else if (tong >= 4 && tong < 6) {
+                diemChu = "D";
+            } else if (tong >= 0 && tong < 4) {
+                diemChu = "F";
+            } else {
+                diemChu = "Không xác định";
+            }
+            alert("Điểm chữ của bạn là: " + diemChu);
+        }
+    </script>
+</body>
+
+</html>
