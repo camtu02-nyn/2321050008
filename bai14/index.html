@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .anh {
+            text-align: center;
+        }
+
+        img {
+            width: 10%;
+            margin: auto;
+        }
+
+        .tieude {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .chedo {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+    </style> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .de {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .thongTin {
+            width: 70%;
+            margin: auto;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: antiquewhite;
+            border-radius: 5px;
+        }
+
+        .form {
+            margin: auto;
+            width: 80%;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #namSinh {
+            margin-left: 40px;
+        }
+
+        #hoTen {
+            margin-left: 60px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px 10px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 10px;
+            border-color: #ddd;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <h1>Ví dụ thay đổi giao diện đen trắng</h1>
+        <div class="anh">
+            <img src="mattroi.jpg" alt="Mặt Trời">
+        </div>
+        <div class="tieude">
+            <h2>Chế độ sáng</h2>
+        </div>
+        <div class="chedo">
+            <button style="font-size: xx-large;" onclick="doiCheDo()">Chuyển sang giao diện</button>
+        </div>
+    </div>
+    <script>
+        let cheDo = "sang";
+        function doiCheDo() {
+            // nếu chế độ là sáng -> cheDo = flase
+            if (cheDo == "sang") {
+                document.getElementsByTagName('body')[0].style = "background-color: black";
+                document.getElementsByTagName('h1')[0].style = "color: yellow";
+                document.getElementsByTagName('h2')[0].style = "color: white";
+                document.getElementsByTagName('h1')[0].innerHTML = "chế độ tối";
+                document.getElementsByTagName('img')[0].src = "mattrang.jpg";
+                cheDo = "toi";
+            }
+            else {
+                document.getElementsByTagName('body')[0].style = "background-color: white";
+                document.getElementsByTagName('img')[0].src = 'mattroi.jpg';
+                document.getElementsByTagName('h1')[0].style = "color: black";
+                document.getElementsByTagName('h1')[0].innerHTML = 'Chế độ sáng';
+                document.getElementsByTagName('h2')[0].style = 'color: black';
+                cheDo = "sang";
+            }
+        }
+    </script> -->
+
+    <h1>Tính chỉ số BMI</h1>
+    <div class="de">
+        <p>Công thức: Cân nặng / (Chiều cao * Chiều cao)</p>
+        Cân nặng: Kg<br>
+        Chiều cao: m<br>
+        <p>Tạo input cho phép nhập vào chiều cao cân nặng</p>
+        Tạo nút bấm kiểm tra chỉ số BMI<br>
+        Trường hợp 1: Người dùng không nhập hoặc nhập sai thông tin phải cảnh báo<br>
+        Trường hợp 2: Nhập đúng, hiển thị được chỉ số BMI và hình ảnh tương ứng<br>
+    </div>
+    <div class="thongTin">
+        <form class="form">
+            <h2>Thông tin người dùng</h2>
+            Họ tên: <input type="text" id="hoTen" placeholder="Nhập họ tên"><br>
+            Năm sinh: <input type="text" id="namSinh" placeholder="Nhập năm sinh"><br>
+            Chiều cao (m): <input type="text" id="chieuCao" placeholder="Nhập chiều cao"><br>
+            Cân nặng (kg): <input type="text" id="canNang" placeholder="Nhập cân nặng"><br>
+            <button onclick="tinhBMI()">Tính chỉ số BMI</button><br>
+            <div id="ketQua"></div>
+            <div id="hinhAnh"></div>
+        </form>
+    </div>
+    <script>
+        function tinhBMI() {
+            let hoTen = document.getElementById('hoTen').value;
+            let namSinh = document.getElementById('namSinh').value;
+            let chieuCao = parseFloat(document.getElementById('chieuCao').value);
+            let canNang = parseFloat(document.getElementById('canNang').value);
+
+            // Kiểm tra dữ liệu nhập vào
+            if (!hoTen || !namSinh || isNaN(chieuCao) || isNaN(canNang) || chieuCao <= 0 || canNang <= 0) {
+                alert('Vui lòng nhập đầy đủ và đúng thông tin!');
+            }
+
+            // Tính chỉ số BMI
+            let bmi = canNang / (chieuCao * chieuCao);
+            let ketQuaText = "Chỉ số BMI của" + hoTen "là" + bmi.toFixed(2) + ". ";
+            let hinhAnhHTML = '';
+
+            // Xác định hình ảnh tương ứng với chỉ số BMI
+            if (bmi < 18.5) {
+                ketQuaText += 'Bạn bị thiếu cân.';
+                hinhAnhHTML = '<img src="thieucan.jpg" alt="Thiếu cân" width="100">';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                ketQuaText += 'Bạn có cân nặng bình thường.';
+                hinhAnhHTML = '<img src="binhthuong.jpg" alt="Bình thường" width="100">';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                ketQuaText += 'Bạn bị thừa cân.';
+                hinhAnhHTML = '<img src="thuacan" alt="Thừa cân" width="100">';
+            } else if (bmi >= 30 && bmi < 34.9) {
+                ketQuaText += 'Bạn bị béo phì cấp độ 1-2';
+                hinhAnhHTML = '<img src="beophicapdo1-2.jpg" alt="Béo phì cấp độ 1-2" width="100">';
+            } else {
+                ketQuaText += 'Bạn bị béo phì nặng';
+                hinhAnhHTML = '<img src="beophinang.jpg" alt="Béo phì cấp độ 3" width="100">';
+            }
+
+            // Hiển thị kết quả và hình ảnh
+            document.getElementById('ketQua').innerHTML = ketQuaText;
+            document.getElementById('hinhAnh').innerHTML = hinhAnhHTML;
+        }
+    </script>
+</body>
+
+</html>
