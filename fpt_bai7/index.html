@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <header>
         <div class="container">
             <nav>
@@ -56,9 +57,9 @@
     <main>
         <section class="banner">
             <a href="#"><img src="./img/09_68bfea5810013f0001205210.jpg" alt="" class="banner-img"></a>
-            <img src="./img/mua-do2-1122.jpeg" alt="" class="banner-img">
+            <img src="./img/mua-do2-1122.jpeg" alt="" class="banner-img" id="banner">
             <div class="banner-info">
-                <h1>Mưa đỏ</h1>
+                <h1 id="tenphim">Mưa đỏ</h1>
                 <p>2025 • T13 • 124 phút • Việt Nam</p>
                 <button class="xem-ngay"><i class="fa-solid fa-play"></i><a href="#"> Xem ngay</a></button>
             </div>
@@ -69,6 +70,10 @@
             </div>
 
             <div class="banner-phim">
+                <div onclick="chonPhim(1)">
+                    <img src="./img/350x495-muado.jpg" alt="">
+                    <div class="tenphim">Mưa đỏ</div>
+                </div>
                 <div>
                     <img src="./img/phim/beautyandthebeaets.jpg" alt="">
                     <div class="tenphim">Người đẹp và quái vật</div>
@@ -86,8 +91,8 @@
                     <div class="tenphim">Mắt biếc</div>
                 </div>
                 <div>
-                    <img src="./img/phim/johnwi.jpg" alt="">
-                    <div class="tenphim">John Wick</div>
+                    <img src="./img/phim/mai.jpg" alt="">
+                    <div class="tenphim">Mai</div>
                 </div>
                 <div>
                     <img src="./img/phim/deptraithaysaisai.jpg" alt="">
@@ -103,7 +108,7 @@
                     <img src="./img/phim/bongdungtrungso.jpg" alt="">
                     <div class="tenphim">Bỗng dưng trúng số</div>
                 </div>
-                <div>
+                <div onclick="chonPhim(2)">
                     <img src="./img/phim/conan.jpg" alt="">
                     <div class="tenphim">Conan</div>
                 </div>
@@ -120,8 +125,8 @@
                     <div class="tenphim">Cám</div>
                 </div>
                 <div>
-                    <img src="./img/phim/deptraithaysaisai.jpg" alt="">
-                    <div class="tenphim">Đẹp trai thấy sai sai</div>
+                    <img src="./img/phim/cogiaoemlaso1.jpg" alt="">
+                    <div class="tenphim">Cô giáo em là số 1</div>
                 </div>
             </div>
         </section>
@@ -180,9 +185,7 @@
             </p>
         </div>
     </footer>
-    <footer>
-
-    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
