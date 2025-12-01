@@ -92,6 +92,12 @@
                         break;
                     case 'dangxuat':         
                         break;
+                    case 'themnguoidung':
+                        include "themnguoidung.php";
+                        break;
+                    case 'capnhat':
+                        include "capnhat.php";
+                        break;
                     }
                 }
             

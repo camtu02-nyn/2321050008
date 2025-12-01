@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<?php
+include("connect.php");
+$id = $_GET['id']; 
+$sql = "DELETE FROM nguoi_dung WHERE id = $id";
+mysqli_query($conn, $sql);
+header("Location: index.php?page_layout=nguoidung");
+?>

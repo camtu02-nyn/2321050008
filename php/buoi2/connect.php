@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = ""; // có mật khẩu thì điền vào
-$database = "fptplay";
+$database = "quan_ly_web_phim_kel";
 
 // $port = 3306; // nếu cần thiết, không điền mặc định là cổng 3306
 

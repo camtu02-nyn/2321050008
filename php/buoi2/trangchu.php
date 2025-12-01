@@ -12,7 +12,7 @@
         //     header('location: login.php');
         // }
     ?> -->
-    <!-- <h1>Trang chủ </h1> -->
+    <h1>Trang chủ </h1>
     <!-- <?php
         // echo "Xin chào " . $_SESSION['username'];
     ?> -->
